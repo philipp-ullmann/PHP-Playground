@@ -2,39 +2,39 @@
 
 Lädt Benutzer von einer Schnittstelle und speichert diese in einer Datenbank.
 
-## Ausführen
+## Ausführungsschritte
 
-1. Consolen Anwendung runterladen
+1. Consolen Anwendung herunterladen
 
 ```
 git clone https://github.com/philipp-ullmann/PHP-Playground.git php_playground
 ```
 
-2. Wechsle in das Verzeichnis
+2. In das Verzeichnis wechseln
 
 ```
 cd php_playground
 ```
 
-3. Installiere Abhängigkeiten
+3. Abhängigkeiten installieren
 
 ```
 composer install
 ```
 
-4. Starte die MySQL Datenbank
+4. MySQL Datenbank starten
 
 ```
 docker-compose up -d
 ```
 
-5. Erstelle das Datenbank Schema
+5. Datenbank Schema erstellen
 
 ```
 php bin/doctrine orm:schema-tool:update --force --dump-sql
 ```
 
-6. Führe das Program aus
+6. Program ausführen
 
 ```
 php program.php
