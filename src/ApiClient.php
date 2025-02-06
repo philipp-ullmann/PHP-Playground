@@ -4,7 +4,7 @@ use JsonMapper\JsonMapperFactory;
 
 class ApiClient
 {
-    const URL = 'https://jsonplaceholder.typicode.com';
+    const string URL = 'https://jsonplaceholder.typicode.com';
 
     public function __construct(protected JsonMapper\JsonMapper $jsonMapper) {
     }
