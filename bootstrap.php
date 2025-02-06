@@ -13,10 +13,8 @@ $config = ORMSetup::createAttributeMetadataConfiguration(
 );
 
 $connection = DriverManager::getConnection([
-    'driver' => 'pdo_mysql',
-    'dbname' => 'development',
-    'user' => 'root',
-    'password' => '',
+    'driver' => 'sqlsrv',
+    'dbname' => 'PHP',
     'host' => 'localhost',
 ], $config);
 

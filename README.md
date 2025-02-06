@@ -4,28 +4,28 @@ Lädt Benutzer von einer Schnittstelle und speichert diese in einer Datenbank.
 
 ## Ausführungsschritte
 
-1. Consolen Anwendung herunterladen
+1. PHP
+
+* Install threadsafe PHP version [8.3](https://windows.php.net/downloads/releases/php-8.3.16-Win32-vs16-x64.zip)
+* Install [xdebug](https://xdebug.org/files/php_xdebug-3.4.1-8.3-ts-vs16-x86_64.dll) into extension folder
+* Install [sqlsrv](https://go.microsoft.com/fwlink/?linkid=2258816) into extension folder
+
+2. Consolen Anwendung herunterladen
 
 ```
 git clone https://github.com/philipp-ullmann/PHP-Playground.git php_playground
 ```
 
-2. In das Verzeichnis wechseln
+3. In das Verzeichnis wechseln
 
 ```
 cd php_playground
 ```
 
-3. Abhängigkeiten installieren
+4. Abhängigkeiten installieren
 
 ```
 composer install
-```
-
-4. MySQL Datenbank starten
-
-```
-docker-compose up -d
 ```
 
 5. Datenbank Schema erstellen
