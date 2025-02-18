@@ -22,19 +22,25 @@ git clone https://github.com/philipp-ullmann/PHP-Playground.git php_playground
 cd php_playground
 ```
 
-4. Abhängigkeiten installieren
+4. Environment Datei erstellen und editieren
+
+```
+cp .env.example .env
+```
+
+5. Abhängigkeiten installieren
 
 ```
 composer install
 ```
 
-5. Datenbank Schema erstellen
+6. Datenbank Schema erstellen
 
 ```
 php bin/doctrine orm:schema-tool:update --force --dump-sql
 ```
 
-6. Program ausführen
+7. Program ausführen
 
 ```
 php program.php

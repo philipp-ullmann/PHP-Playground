@@ -7,6 +7,9 @@ use JsonMapper\JsonMapperFactory;
 
 require_once "vendor/autoload.php";
 
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 $config = ORMSetup::createAttributeMetadataConfiguration(
     paths: [__DIR__ . '/src'],
     isDevMode: true,
@@ -14,8 +17,10 @@ $config = ORMSetup::createAttributeMetadataConfiguration(
 
 $connection = DriverManager::getConnection([
     'driver' => 'sqlsrv',
-    'dbname' => 'PHP',
+    'dbname' => $_ENV['DB_NAME'],
     'host' => 'localhost',
+    'user' => $_ENV['DB_USER'],
+    'password' => $_ENV['DB_PASSWORD']
 ], $config);
 
 $entityManager = new EntityManager($connection, $config);
